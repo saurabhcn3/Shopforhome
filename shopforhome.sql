@@ -1,4 +1,3 @@
-DROP TABLE IF EXISTS users;
 
 CREATE TABLE users (
   active bit(1) NOT NULL,
@@ -12,7 +11,7 @@ CREATE TABLE users (
   UNIQUE KEY  (email)
 );
 
-DROP TABLE IF EXISTS product_category;
+
 CREATE TABLE product_category (
   category_id int NOT NULL,
   category_name varchar(255),
@@ -21,10 +20,10 @@ CREATE TABLE product_category (
   update_time datetime(6),
   PRIMARY KEY (category_id),
   UNIQUE KEY  (category_type)
-)
+);
 
 
-DROP TABLE IF EXISTS product_info;
+
 CREATE TABLE product_info (
   product_id varchar(255) NOT NULL,
   category_type int DEFAULT 0,
@@ -37,4 +36,4 @@ CREATE TABLE product_info (
   product_stock int NOT NULL,
   update_time datetime(6)L,
   PRIMARY KEY (product_id)
-)
+);
